@@ -1,0 +1,247 @@
+--《Booting Library》--
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Fragment5685/Fragment-UI/main/Punch-Library", true))()
+ 
+--《Values & Functions》--
+function Destroy()
+game.CoreGui:FindFirstChild("Darkrai"):Destroy()
+end
+ 
+--《Create Window》--
+local window = library:Window("Ultime Script V1", "",Enum.KeyCode.RightControl);
+ 
+--《Define Tabs》--
+tab1 = window:Tab("Information")
+tab2 = window:Tab("Farm")
+tab3 = window:Tab("Teleports")
+tab4 = window:Tab("Player")
+tab5 = window:Tab("Credits")
+ 
+--《Define tab1》--
+tab1:Seperator("Current Place")
+ 
+tab1:Button(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name,function()
+setclipboard(game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name)
+end)
+ 
+tab1:Seperator("Username")
+ 
+tab1:Button(game:GetService("Players").LocalPlayer.Name,function()
+setclipboard()
+end)
+ 
+tab1:Line()
+ 
+ 
+--《Define tab2》--
+tab2:Seperator("Win Farms")
+ 
+tab2:Toggle("Auto +1 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-201, 2, -28))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +10 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-198, 3, -96))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +50 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-199, 2, -166))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +250 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-217, 56, -241))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +750 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(99, 1, -1215))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +1500 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(78, 1, -1359))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +3000 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-237, 1, -1312))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +15000 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-184, 2, -1610))
+end
+else
+_G.loop = false
+end
+end)
+ 
+tab2:Toggle("Auto +25000 Win",false,function(state)
+if state then
+_G.loop = true
+while _G.loop == true do wait()
+wait(4)
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-272, 2, -1586))
+end
+else
+_G.loop = false
+end
+end)
+
+ 
+tab2:Line()
+ 
+ 
+--《Define tab3》--
+tab3:Seperator("Teleports")
+ 
+tab3:Button("World 1",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-24, 2, -26))
+end)
+ 
+tab3:Button("World 2",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-26, 2, -98))
+end)
+ 
+tab3:Button("World 3",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-26, 2, -165))
+end)
+ 
+tab3:Button("World 4",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-25, 1, -241))
+end)
+ 
+tab3:Button("World 5",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-78, 1, -1171))
+end)
+ 
+tab3:Button("World 6",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-83, 1, -1262))
+end)
+ 
+tab3:Button("World 7",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-107, 2, -1337))
+end)
+ 
+tab3:Button("World 8",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-128, 1, -1427))
+end)
+ 
+tab3:Button("World 9",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-204, 1, -1446))
+end)
+ 
+tab3:Line()
+ 
+--《Define tab4》--
+tab4:Seperator("Player")
+ 
+tab4:Slider("Walk Speed",1,200,16,function(pws)
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = pws
+end)
+ 
+tab4:Slider("Jump Power",1,200,50,function(pjp)
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = pjp
+end)
+ 
+tab4:Slider("Hip Height",1,200,0,function(phh)
+game.Players.LocalPlayer.Character.Humanoid.HipHeight = phh
+end)
+ 
+tab4:Slider("Gravity",1,200,196.2,function(pg)
+game.Workspace.Gravity = pg
+end)
+ 
+tab4:Button("Anti Kick",function()
+loadstring(game:HttpGet("https://pastebin.com/raw/FPfaukXN"))()
+end)
+
+tab4:Button("kill You",function()
+game.Players.LocalPlayer.Character:MoveTo(Vector3.new(-200, 2, -246))
+end)
+ 
+tab4:Line()
+ 
+tab4:Seperator("Leave")
+ 
+tab4:Button("Leave the Script",function()
+Destroy()
+end)
+ 
+tab4:Line()
+
+--《Define tab5》--
+tab5:Seperator("Credits")
+ 
+tab5:Button("Discord Tag",function()
+setclipboard("hacker3660#0974")
+end)
+ 
+tab5:Button("Discord Invite",function()
+setclipboard("https://discord.gg/BQNSJfJ3Xd")
+end)
+ 
+tab5:Button("YouTube Channel",function()
+setclipboard("https://youtube.com/@fragment5685")
+end)
+
+tab5:Button("Site Officiel ",function()
+setclipboard("https://fragment5685.github.io/Ultime-Jeux/")
+end)
+ 
+tab5:Line()
